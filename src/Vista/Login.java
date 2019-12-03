@@ -105,6 +105,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirMouseClicked
 
     private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
+        Panel p = new Panel();
         String usuario = this.txtUsuario.getText();
         String clave = new String(this.txtClave.getPassword());
         String errores = "";
@@ -119,6 +120,8 @@ public class Login extends javax.swing.JFrame {
         boolean esvalido = Usuario.conectar(usuario, clave);
         if(esvalido){
             JOptionPane.showMessageDialog(this, "Las credenciales son correctas", "Exito", JOptionPane.INFORMATION_MESSAGE);
+            p.setVisible(true);
+                this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "El nombre de usuario o clave son incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
         }
