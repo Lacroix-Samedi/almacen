@@ -1,7 +1,7 @@
 
 package Vista;
 
-import SQL.Usuario;
+import Conexion.Usuario;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
