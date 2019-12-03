@@ -23,7 +23,7 @@ public class Usuario {
         
         String query = "Select * FROM usuario ";
         query += "WHERE apodo = '" + usuario + "'";
-        query += "AND clave = '" + clave + "'";
+        query += "AND clave = '" + clave + "';";
         
         
         try {
